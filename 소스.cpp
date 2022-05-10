@@ -1,38 +1,48 @@
 #include <iostream>
+using namespace std;
+
+int total_money = 0;						// 전역변수 total_money
+	
+int total(int* array) {						// 지역변수 array를 포인터 변수로 선언, 후에 투입될 배열 인자의 주소값 저장하게 됨.
+	int i;
+	for (i = 0; i < 4; i++) {
+		total_money += array[i];
+	}
+	return total_money;
+}
+
+void myaccounts(int* array, int length) {	// 지역변수 array를 포인터 변수로 선언, 후에 투입될 배열 인자의 주소값 저장하게 됨.
+											// 배열의 함수에 전달될 때 포인터로 변환되므로 길이를 별도의 매개변수로 받아야 한다.
+
+	int j;
+
+	for (j = 0; j < length; j++) {
+		cout << "\t" << array[j] << "\t |";
+	}
+}
+
+
 int main() {
-	using namespace std; //cout, cin 앞에서 std:: 생략
+;
+	int bank[4] = { 5000,4000,0,10 };
+	string bank_name[4] = { "하나","우리","신한", "국민" };
+	total(bank);							// total 함수 실행, int * array = bank (배열의 포인터이므로 등호 우측에 &bank[0] 또는 bank 와야 함)
 
-	char name[12]; // 이름 입력받을 변수 선언, 5글자까지 입력 가능
-	cout << "당신의 이름은 무엇입니까? ";
-	cin.getline(name, 12, '\n'); // 성과 이름 사이에 공백 필요하므로 cin 대신 사용
-	cout << "반갑습니다." << name << "님" << endl << endl; // name으로 입력받은 이름 표시
+	cout << "*************** SWING 자산관리 서비스 ***************" << endl;
+	cout << "----------------- 은행 별 계좌 정보 -----------------" << endl;
 
-	cout << "----------SWING 30----------" << endl;
-	cout << "음료의 가격 입력을 시작합니다." << endl << endl ;
+	int j;
 
-	int coke, water, fanta, amount_coke, amount_water, amount_fanta, total; // 입력받을 변수 선언
-	cout << "콜라의 가격 : ";
-	cin >> coke; // 콜라 가격 입력받음
-	cout << "삼다수의 가격 : ";
-	cin >> water; // 삼다수 가격 입력받음
-	cout << "환타의 가격 : "; // 환타 가격 입력받음
-	cin >> fanta;
-
+	for (j = 0; j < 4; j++) {				// 은행의 이름 출력
+		cout << "\t" << bank_name[j] << "\t |";
+	}
+	cout << endl;
+	myaccounts(bank, 4);					// 배열의 포인터 변수를 선언할 때 배열의 이름 자체를 통해 선언할 수 있다. 
 	cout << endl;
 
-	cout << "개수를 입력해주세요." << endl << endl; 
-	cout << "콜라 수량 : "; // 콜라 수량 입력받음
-	cin >> amount_coke;
-	cout << "삼다수 수량 : "; // 삼다수 수량 입력받음
-	cin >> amount_water;
-	cout << "환타 수량 : "; // 환타 수량 입력받음
-	cin >> amount_fanta;
-
-	cout << "----------------------------" << endl;
-	total = (coke * amount_coke + water * amount_water + fanta * amount_fanta) - 500;
-	/* 최종 가격은 각 음료의 가격에 음료의 수량을 곱한 값이다. 그러나 500원을 할인해주려고 하므로
-	마지막에 출력할 total 값에서 미리 500원을 제외했다. */
-	cout << "500원을 할인받아 총 " << total << "원 입니다." << endl;
+	cout << "-----------------------------------------------------" << endl;
+	cout << "현재 SWING 자산관리 서비스에 등록된 회원님의 총 자산은 " << total_money << "원 입니다." << endl;
+	cout << "*****************************************************" << endl;
 
 	return 0;
 }
