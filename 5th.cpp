@@ -37,7 +37,7 @@ public:
 
 class Cart {
 private:
-	string apply[3]{ "0", "0", "0" };
+	string apply[3]{ "a", "b", "c" };		// 수강신청 과목이 들어갈 곳, 수강신청 이전의 값 임의로 설정
 
 
 
@@ -57,18 +57,18 @@ public:
 		cin >> a_num;
 		{
 			if (a_num == "0001") {
-				if (apply[0] == "0") apply[0] = pClass[0];
-				else if (apply[1] == "0") apply[1] = pClass[0];
+				if (apply[0] == "a") apply[0] = pClass[0];
+				else if (apply[1] == "b") apply[1] = pClass[0];
 				else apply[2] = pClass[0];
 			}
 			else if (a_num == "0002") {
-				if (apply[0] == "0") apply[0] = pClass[1];
-				else if (apply[1] == "0") apply[1] = pClass[1];
+				if (apply[0] == "a") apply[0] = pClass[1];
+				else if (apply[1] == "b") apply[1] = pClass[1];
 				else apply[2] = pClass[1];
 			}
 			else if (a_num == "0003") {
-				if (apply[0] == "0") apply[0] = pClass[2];
-				else if (apply[1] == "0") apply[1] = pClass[2];
+				if (apply[0] == "a") apply[0] = pClass[2];
+				else if (apply[1] == "b") apply[1] = pClass[2];
 				else apply[2] = pClass[2];
 			}
 		}
