@@ -2,25 +2,25 @@
 #include <string>
 using namespace std;
 
-string* pClass = new string[3]{ "c++ ÇÁ·Î±×·¡¹Ö","Linux ÇÁ·Î±×·¡¹Ö","¸®¹ö½Ì" };
+string* pClass = new string[3]{ "c++ í”„ë¡œê·¸ë˜ë°","Linux í”„ë¡œê·¸ë˜ë°","ë¦¬ë²„ì‹±" };
 int i = 0;
 
 class Member {
 private:
-	string name;		
-	string id, aid;			// È¸¿ø°¡ÀÔ ½Ã ÀÛ¼ºÇÏ´Â ¾ÆÀÌµğ, ·Î±×ÀÎ ½Ã ÀÛ¼ºÇÏ´Â ¾ÆÀÌµğ
-	int pwd, apwd;			// È¸¿ø°¡ÀÔ ½Ã µî·ÏÇÏ´Â ºñ¹Ğ¹øÈ£, ·Î±×ÀÎ ½Ã ÀÛ¼ºÇÏ´Â ºñ¹Ğ¹øÈ£
+	string name;
+	string id, aid;			// íšŒì›ê°€ì… ì‹œ ì‘ì„±í•˜ëŠ” ì•„ì´ë””, ë¡œê·¸ì¸ ì‹œ ì‘ì„±í•˜ëŠ” ì•„ì´ë””
+	int pwd, apwd;			// íšŒì›ê°€ì… ì‹œ ë“±ë¡í•˜ëŠ” ë¹„ë°€ë²ˆí˜¸, ë¡œê·¸ì¸ ì‹œ ì‘ì„±í•˜ëŠ” ë¹„ë°€ë²ˆí˜¸
 public:
 	void setName() {
-		cout << "ÀÌ¸§: ";
+		cout << "ì´ë¦„: ";
 		cin >> name;
 	};
 	void setId() {
-		cout << "¾ÆÀÌµğ: ";
+		cout << "ì•„ì´ë””: ";
 		cin >> id;
 	};
 	void setPassword() {
-		cout << "ºñ¹Ğ¹øÈ£: ";
+		cout << "ë¹„ë°€ë²ˆí˜¸: ";
 		cin >> pwd;
 	};
 	string getName() {
@@ -37,7 +37,7 @@ public:
 
 class Cart {
 private:
-	string apply[3]{ "a", "b", "c" };		// ¼ö°­½ÅÃ» °ú¸ñÀÌ µé¾î°¥ °÷, ¼ö°­½ÅÃ» ÀÌÀüÀÇ °ª ÀÓÀÇ·Î ¼³Á¤
+	string apply[3]{ "a", "b", "c" };		// ìˆ˜ê°•ì‹ ì²­ ê³¼ëª©ì´ ë“¤ì–´ê°ˆ ê³³, ìˆ˜ê°•ì‹ ì²­ ì´ì „ì˜ ê°’ ì„ì˜ë¡œ ì„¤ì •
 
 
 
@@ -49,11 +49,11 @@ public:
 			cout << i + 1;
 			cout << endl;
 		}
-		
+
 	}
 	void bag_course() {
 		string a_num;
-		cout << "Ãß°¡ÇÒ ÇĞ¼ö ¹øÈ£ >> ";
+		cout << "ì¶”ê°€í•  í•™ìˆ˜ ë²ˆí˜¸ >> ";
 		cin >> a_num;
 		{
 			if (a_num == "0001") {
@@ -73,36 +73,36 @@ public:
 			}
 		}
 		if (apply[0] == apply[1]) {
-			apply[1] = "0";
-			cout << "ÀÌ¹Ì MY Àå¹Ù±¸´Ï¿¡ ´ã°ÜÁ® ÀÖ½À´Ï´Ù." << endl;
+			apply[1] = "b";
+			cout << "ì´ë¯¸ MY ì¥ë°”êµ¬ë‹ˆì— ë‹´ê²¨ì ¸ ìˆìŠµë‹ˆë‹¤." << endl;
 		}
 		else if (apply[1] == apply[2]) {
-			apply[2] = "0";
-			cout << "ÀÌ¹Ì MY Àå¹Ù±¸´Ï¿¡ ´ã°ÜÁ® ÀÖ½À´Ï´Ù." << endl;
+			apply[2] = "c";
+			cout << "ì´ë¯¸ MY ì¥ë°”êµ¬ë‹ˆì— ë‹´ê²¨ì ¸ ìˆìŠµë‹ˆë‹¤." << endl;
 		}
 		else if (apply[2] == apply[0]) {
-			apply[2] = "0";
-			cout << "ÀÌ¹Ì MY Àå¹Ù±¸´Ï¿¡ ´ã°ÜÁ® ÀÖ½À´Ï´Ù." << endl;
+			apply[2] = "c";
+			cout << "ì´ë¯¸ MY ì¥ë°”êµ¬ë‹ˆì— ë‹´ê²¨ì ¸ ìˆìŠµë‹ˆë‹¤." << endl;
 		}
 
 	}
 
 	void put_bag() {
-		cout << "======== MY Àå¹Ù±¸´Ï ========" << endl;
+		cout << "======== MY ì¥ë°”êµ¬ë‹ˆ ========" << endl;
 
 		cout << "1. ";
-		if (apply[0] != "0") cout << apply[0];
+		if (apply[0] != "a") cout << apply[0];
 		cout << endl;
 		cout << "2. ";
-		if (apply[1] != "0") cout << apply[1];
+		if (apply[1] != "b") cout << apply[1];
 		cout << endl;
 		cout << "3. ";
-		if (apply[2] != "0") cout << apply[2];
+		if (apply[2] != "c") cout << apply[2];
 		cout << endl;
 	}
 
-	};
-	
+};
+
 
 
 int main() {
@@ -112,11 +112,11 @@ int main() {
 	Member* p = account;
 	Cart applying;
 	while (1) {
-		cout << "------------- ¼­¿ï¿©ÀÚ´ëÇĞ±³ Á¾ÇÕÁ¤º¸½Ã½ºÅÛ -------------" << endl;
-		cout << "1. È¸¿ø°¡ÀÔ" << endl;
-		cout << "2. ·Î±×ÀÎ" << endl;
+		cout << "------------- ì„œìš¸ì—¬ìëŒ€í•™êµ ì¢…í•©ì •ë³´ì‹œìŠ¤í…œ -------------" << endl;
+		cout << "1. íšŒì›ê°€ì…" << endl;
+		cout << "2. ë¡œê·¸ì¸" << endl;
 		cout << endl;
-		cout << "¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä >> ";
+		cout << "ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” >> ";
 		cin >> x;
 		cout << "---------------------------------------------------------" << endl;
 
@@ -125,55 +125,55 @@ int main() {
 			p[0].setName();
 			p[1].setId();
 			p[2].setPassword();
-			cout << "=== È¸¿ø°¡ÀÔ ¼º°ø ===" << endl;
+			cout << "=== íšŒì›ê°€ì… ì„±ê³µ ===" << endl;
 		}
 
 		else if (x == 2) {
 			cout << endl;
-			cout << "¾ÆÀÌµğ: ";
+			cout << "ì•„ì´ë””: ";
 			cin >> aid;
-			cout << "ºñ¹Ğ¹øÈ£: ";
+			cout << "ë¹„ë°€ë²ˆí˜¸: ";
 			cin >> apwd;
 			{if ((p[1].getId() == aid) && (apwd == p[2].getPassword())) {
 				cout << endl;
-				cout << "=== ·Î±×ÀÎ ¼º°ø ===" << endl;
-				cout << p[0].getName() << "´Ô È¯¿µÇÕ´Ï´Ù." << endl;
+				cout << "=== ë¡œê·¸ì¸ ì„±ê³µ ===" << endl;
+				cout << p[0].getName() << "ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤." << endl;
 				cout << endl;
 				break;
 			}
-			else cout << "¾ÆÀÌµğ È¤Àº ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù." << endl;
+			else cout << "ì•„ì´ë”” í˜¹ì€ ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë ¸ìŠµë‹ˆë‹¤." << endl;
 			}
 
 		}
-		else cout << "1 ¶Ç´Â 2¸¸ ÀÔ·ÂÇØÁÖ¼¼¿ä." << endl;
+		else cout << "1 ë˜ëŠ” 2ë§Œ ì…ë ¥í•´ì£¼ì„¸ìš”." << endl;
 	}
-	
-		while (1) {
-			{cout << "===============" << endl;
-			cout << "1. Àå¹Ù±¸´Ï" << endl;
-			cout << "2. °­ÀÇ ´ã±â" << endl;
-			cout << "3. ¼ö°­½ÅÃ» È®ÀÎ" << endl;
-			cout << "4. ·Î±×¾Æ¿ô" << endl;
-			cout << "¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ";
-			cin >> y; }
-			switch (y) {
-			case(1):
-				applying.print();
-				break;
-			case(2):
-				applying.bag_course();
-				break;
-			case(3):
-				applying.put_bag();
-				break;
-			case(4):
-				cout << "---------- ·Î±×¾Æ¿ô ----------" << endl;
-				cout << "·Î±×¾Æ¿ô µÇ¾ú½À´Ï´Ù. ¾È³çÈ÷ °¡¼¼¿ä." << endl;
-				return 0;
-			}	
-			
-			
+
+	while (1) {
+		{cout << "===============" << endl;
+		cout << "1. ì¥ë°”êµ¬ë‹ˆ" << endl;
+		cout << "2. ê°•ì˜ ë‹´ê¸°" << endl;
+		cout << "3. ìˆ˜ê°•ì‹ ì²­ í™•ì¸" << endl;
+		cout << "4. ë¡œê·¸ì•„ì›ƒ" << endl;
+		cout << "ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ";
+		cin >> y; }
+		switch (y) {
+		case(1):
+			applying.print();
+			break;
+		case(2):
+			applying.bag_course();
+			break;
+		case(3):
+			applying.put_bag();
+			break;
+		case(4):
+			cout << "---------- ë¡œê·¸ì•„ì›ƒ ----------" << endl;
+			cout << "ë¡œê·¸ì•„ì›ƒ ë˜ì—ˆìŠµë‹ˆë‹¤. ì•ˆë…•íˆ ê°€ì„¸ìš”." << endl;
+			return 0;
 		}
-		delete[] pClass;
-		return 0;
+
+
+	}
+	delete[] pClass;
+	return 0;
 }
