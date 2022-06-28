@@ -14,7 +14,7 @@ private:
 public:
 	GameCharacter() {};
 	GameCharacter(const GameCharacter& c);
-	~GameCharacter() { cout << "¼Ò¸êÀÚ ½ÇÇà" << endl; }
+	~GameCharacter() { cout << "ì†Œë©¸ìž ì‹¤í–‰" << endl; }
 
 	void set() {
 		cin >> name >> age >> job;
@@ -62,54 +62,54 @@ int main() {
 	int num, edit;
 	GameCharacter chr1;
 
-	cout << "1. Ä³¸¯ÅÍ »ý¼º" << endl;
-	cout << "»ý¼ºÇÒ Ä³¸¯ÅÍÀÇ ÀÌ¸§, ³ªÀÌ, Á÷¾÷À» ¼ø¼­´ë·Î ÀÔ·ÂÇØÁÖ¼¼¿ä." << endl;
-	cout << "Âü°í»çÇ×: Á÷¾÷ÀÇ Á¾·ù´Â ÀÚÀ¯·Ó°Ô!" << endl;
+	cout << "1. ìºë¦­í„° ìƒì„±" << endl;
+	cout << "ìƒì„±í•  ìºë¦­í„°ì˜ ì´ë¦„, ë‚˜ì´, ì§ì—…ì„ ìˆœì„œëŒ€ë¡œ ìž…ë ¥í•´ì£¼ì„¸ìš”." << endl;
+	cout << "ì°¸ê³ ì‚¬í•­: ì§ì—…ì˜ ì¢…ë¥˜ëŠ” ìžìœ ë¡­ê²Œ!" << endl;
 	cout << "--> ";
 	chr1.set();
 
-	cout << "Ä³¸¯ÅÍ°¡ »ý¼ºµÇ¾ú½À´Ï´Ù." << endl;
+	cout << "ìºë¦­í„°ê°€ ìƒì„±ë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
 
-	cout << endl << "2. Ä³¸¯ÅÍ º¹»ç" << endl;
+	cout << endl << "2. ìºë¦­í„° ë³µì‚¬" << endl;
 	GameCharacter chr2(chr1);
-	cout << "º¹»ç°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù." << endl;
+	cout << "ë³µì‚¬ê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
 
 	while (1) {
-		cout << endl << "========== Ä³¸¯ÅÍ °ü¸® ==========" << endl;
-		cout << "3. Ä³¸¯ÅÍ Á¤º¸ È®ÀÎ" << endl;
-		cout << "4. Ä³¸¯ÅÍ Á¤º¸ ¼öÁ¤" << endl;
-		cout << "5. Á¾·á" << endl;
-		cout << "¹øÈ£¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä: ";
+		cout << endl << "========== ìºë¦­í„° ê´€ë¦¬ ==========" << endl;
+		cout << "3. ìºë¦­í„° ì •ë³´ í™•ì¸" << endl;
+		cout << "4. ìºë¦­í„° ì •ë³´ ìˆ˜ì •" << endl;
+		cout << "5. ì¢…ë£Œ" << endl;
+		cout << "ë²ˆí˜¸ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”: ";
 		cin >> num;
 
 		switch (num) {
 		case 3:
-			cout << endl << "******** Ä³¸¯ÅÍ Á¤º¸ ********" << endl;
-			cout << "Ä³¸¯ÅÍ ÀÌ¸§: ";
+			cout << endl << "******** ìºë¦­í„° ì •ë³´ ********" << endl;
+			cout << "ìºë¦­í„° ì´ë¦„: ";
 			chr1.getname();
 			cout << endl;
-			cout << "Ä³¸¯ÅÍ ³ªÀÌ: ";
+			cout << "ìºë¦­í„° ë‚˜ì´: ";
 			chr1.getage();
 			cout << endl;
-			cout << "Ä³¸¯ÅÍ Á÷¾÷: ";
+			cout << "ìºë¦­í„° ì§ì—…: ";
 			chr1.getjob();
 			cout << endl;
-			cout << endl << "******** Ä³¸¯ÅÍ Á¤º¸ ********" << endl;
-			cout << "Ä³¸¯ÅÍ ÀÌ¸§: ";
+			cout << endl << "******** ìºë¦­í„° ì •ë³´ ********" << endl;
+			cout << "ìºë¦­í„° ì´ë¦„: ";
 			chr2.getname();
 			cout << endl;
-			cout << "Ä³¸¯ÅÍ ³ªÀÌ: ";
+			cout << "ìºë¦­í„° ë‚˜ì´: ";
 			chr2.getage();
 			cout << endl;
-			cout << "Ä³¸¯ÅÍ Á÷¾÷: ";
+			cout << "ìºë¦­í„° ì§ì—…: ";
 			chr2.getjob();
 			cout << endl;
 			break;
 
 		case 4:
-			cout << endl << "¼öÁ¤ÇÏ°í ½ÍÀº Ä³¸¯ÅÍ¸¦ ¼±ÅÃÇÏ¼¼¿ä. (1 or 2): ";
+			cout << endl << "ìˆ˜ì •í•˜ê³  ì‹¶ì€ ìºë¦­í„°ë¥¼ ì„ íƒí•˜ì„¸ìš”. (1 or 2): ";
 			cin >> edit;
-			cout << "¼³Á¤ÇÏ°í ½ÍÀº ÀÌ¸§, ³ªÀÌ, Á÷¾÷À» ÀÔ·ÂÇØÁÖ¼¼¿ä." << endl;
+			cout << "ì„¤ì •í•˜ê³  ì‹¶ì€ ì´ë¦„, ë‚˜ì´, ì§ì—…ì„ ìž…ë ¥í•´ì£¼ì„¸ìš”." << endl;
 			cout << "--> ";
 			if (edit == 1) {
 				chr1.set();
@@ -117,11 +117,11 @@ int main() {
 			else if (edit == 2) {
 				chr2.set();
 			}
-			cout << "Á¤»óÀûÀ¸·Î ¼öÁ¤µÇ¾ú½À´Ï´Ù." << endl;
+			cout << "ì •ìƒì ìœ¼ë¡œ ìˆ˜ì •ë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
 			break;
 
 		case 5:
-			cout << "Á¾·áµÇ¾ú½À´Ï´Ù." << endl;
+			cout << "ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤." << endl;
 			return 0;
 
 		}
